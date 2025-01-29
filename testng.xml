@@ -4,6 +4,9 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.api.tests.LoginTest"/>
+      <class name="com.api.tests.SignUpTest"/>
+      <class name="com.api.tests.UpdateProfileTest"/>
+      <class name="com.api.tests.ForgotPasswordTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

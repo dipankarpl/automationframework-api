@@ -1,6 +1,7 @@
 package com.api.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.api.base.AuthService;
@@ -11,10 +12,10 @@ import com.api.models.response.LoginResponse;
 import com.api.models.response.UserProfileResponse;
 
 import io.restassured.response.Response;
-
-public class GetProfileTest {
+@Listeners(com.api.listeners.TestListener.class)
+public class UpdateProfileTest {
 	@Test(description = "verify update profile api is working")
-	public void getProfileTest() {
+	public void updateProfileTest() {
 		AuthService auth = new AuthService();
 		Response res = auth.login(new LoginRequest("abc.def", "password"));
 		LoginResponse loginres = res.as(LoginResponse.class);
